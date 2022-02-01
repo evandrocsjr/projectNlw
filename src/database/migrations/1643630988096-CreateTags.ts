@@ -9,7 +9,7 @@ export class CreateTags1643630988096 implements MigrationInterface {
                 columns:[
                     {
                         name: "id",
-                        type:"uuid",
+                        type:"int",
                         isPrimary: true
                     },
                     {

@@ -9,20 +9,20 @@ export class CreateCompliments1643652308222 implements MigrationInterface {
                 columns: [
                     {
                         name: "id",
-                        type: "uuid",
+                        type: "int",
                         isPrimary: true
                     },
                     {
                         name: "user_sender",
-                        type: "uuid",
+                        type: "int",
                     },
                     {
                         name: "user_receiver",
-                        type: "uuid"
+                        type: "int"
                     },
                     {
                         name: "tag_id",
-                        type: "uuid"
+                        type: "int"
                     },
                     {
                         name: "message",
@@ -40,24 +40,24 @@ export class CreateCompliments1643652308222 implements MigrationInterface {
                         referencedTableName: "users", // NOME DA TABELA DE LA
                         referencedColumnNames: ["id"], // COLUNA DE LA
                         columnNames: ["user_sender"], // COLUNA DE CA
-                        onDelete: "SET NULL",
-                        onUpdate: "SET NULL"
+                        onDelete: "CASCADE",
+                        onUpdate: "CASCADE"
                     },
                     {
                         name: "FKUserReceiverCompliments",
                         referencedTableName: "users", // NOME DA TABELA DE LA
                         referencedColumnNames: ["id"], // COLUNA DE LA
                         columnNames: ["user_receiver"], // COLUNA DE CA
-                        onDelete: "SET NULL",
-                        onUpdate: "SET NULL"
+                        onDelete: "CASCADE",
+                        onUpdate: "CASCADE"
                     },
                     { 
                         name: "FKTagCompliments",
                         referencedTableName: "tags", // NOME DA TABELA DE LA
                         referencedColumnNames: ["id"], // COLUNA DE LA
                         columnNames: ["tag_id"], // COLUNA DE CA
-                        onDelete: "SET NULL",
-                        onUpdate: "SET NULL"
+                        onDelete: "CASCADE",
+                        onUpdate: "CASCADE"
                     }
                 ]
             })
